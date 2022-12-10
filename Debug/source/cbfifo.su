@@ -1,0 +1,4 @@
+../source/cbfifo.c:36:5:pothole_detector	168	static
+../source/cbfifo.c:82:5:PotholeModeValue	16	static
+../source/cbfifo.c:105:6:Final_pothole	16	static
+../source/cbfifo.c:142:6:cbfifo_enqueue	16	static
