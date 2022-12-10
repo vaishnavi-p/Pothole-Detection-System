@@ -11,10 +11,25 @@ This project implements a Pothole detection System that will detect the potholes
 
 ## Objectives
 * To develop an algorithm to detect the irregularities in the road surface based on the accelerometer data of a moving car.
-* To interface MMA8451Q (3-axis accelerometer) present on FRDM-KL25Z board with I2C to measure the movement across X-axis.
+* To interface MMA8451Q (3-axis accelerometer) present on FRDM-KL25Z board with I2C to measure the movement across Z-axis.
 
 ## Block Diagram
 ![Block_diagram][Block_diagram]
+
+## Pothole Detection Algorithm
+* Curcular buffer is filled with the output values from the accelerometer measured across z-axis movement.
+* When the buffer is fully filled to it's capacity then the computation starts.
+* There are two methods of computing the pothole detection:
+  1. Method 1: * Calculate the PT1 low-pass filter value with buffer value.
+               * Calulate the average of the difference of the filter value and the original value.
+  2. Method 2: * Counting how many number of times the buffer values exceed the given threshold value.
+* Combining the method 1 and method 2, if the average value is greater than given threshold 1 (method 1) and counted value is greater than threshold 2 (method 2), only then the pothole is detected.
+* Output values and the pothole detection decision is displayed via UART
+* When the pothole is detected the LED on the board will be on for RED.
+* When there's no pothole the LED will remain off.
+* Buffer is cleared once the computation is done and then it takes for the next set of accelerometer values.
+* Simuteneously, the python script will be run on the system which will read all the data from UART and save it to the log file.
+
 
 ## Hardware Requirements & Specifications
 * Dev. board: FRDM-KL25Z
@@ -49,3 +64,5 @@ Please click on the following link to watch the project demo video:
 ## Challanges Faced
 * I faced some challanges while deciding the threshold value for the pothole detection.
 * Since this is a prototype model, configuring the system to real time scenario was kind of difficult.
+* Initially by just using the threshold and mod values, It was giving pothole detection in case of inclination as well, I resolved this issue by using filter.
+* Implementation of high pass filter was computetionally expensive and complex, hence I used a PT1 low-pass filter and calculated the deviation of the original and the filter output. This approach eliminated the false detection and also solved the initial calibration issues.
