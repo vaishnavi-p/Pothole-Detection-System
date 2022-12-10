@@ -61,7 +61,7 @@ Move the board forward and backward in X- direction
 Output: No pothole, LED off
 
   <br>Screenshot:  
-   ![X-Axis-movement](screenshots/3.png)
+   ![X-Axis-movement](screenshots/3.jpeg)
    
    ![Output](screenshots/4.png)
 
@@ -69,7 +69,7 @@ Test 3:
 Move the board up side wise (forward, backword) in Y-direction
 Ouput: No pothole, LED OFF
   <br>Screenshot:  
-   ![Y-axis-movement](screenshots/5.png)
+   ![Y-axis-movement](screenshots/5.jpeg)
    
    ![Output](screenshots/6.png)
 
@@ -77,7 +77,7 @@ Test 4:
 Move the board up and down (rapidly, as a jerk) in Z-direction
 Ouput: Pothole detected, RED LED ON
   <br>Screenshot:  
-   ![Z-axis-movement](screenshots/7.png)
+   ![Z-axis-movement](screenshots/7.jpeg)
    
    ![Output](screenshots/8.png)
 
