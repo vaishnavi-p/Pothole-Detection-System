@@ -45,22 +45,18 @@ This project implements a Pothole detection System that will detect the potholes
 * delay.c/.h          : Contains a delay function
 
 ## UART Terminal Configuration
-![UART_Configuration][UART_Configuration]
+![UART](screenshots/UART.png)
 
 ## Manual Test Routine
 1. Test 1:
   When the board is kept stable, 
-  Output: initial values of X, Y, Z from the accelerometer will be displayed on the UART, No pothole, LED OFF
-  <br>Screenshot:  
-  
+  Output: initial values of X, Y, Z from the accelerometer will be displayed on the UART, No pothole, LED OFF  
    ![Board_stable](screenshots/1.png)
   
 
 2. Test 2:
 Move the board forward and backward in X- direction
 Output: No pothole, LED off
-
-  <br>Screenshot:  
    ![X-Axis-movement](screenshots/3.jpeg)
    
    ![Output](screenshots/4.png)
@@ -68,15 +64,13 @@ Output: No pothole, LED off
 Test 3:
 Move the board up side wise (forward, backword) in Y-direction
 Ouput: No pothole, LED OFF
-  <br>Screenshot:  
    ![Y-axis-movement](screenshots/5.jpeg)
    
    ![Output](screenshots/6.png)
 
 Test 4:
 Move the board up and down (rapidly, as a jerk) in Z-direction
-Ouput: Pothole detected, RED LED ON
-  <br>Screenshot:  
+Ouput: Pothole detected, RED LED ON 
    ![Z-axis-movement](screenshots/7.jpeg)
    
    ![Output](screenshots/8.png)
@@ -84,22 +78,18 @@ Ouput: Pothole detected, RED LED ON
 Test 5:
 Moving the board gradually in the upward slope (Movement in X and Z axis)
 Ouput: No pothole, LED OFF
-
-  <br>Screenshot:  
    ![upward_slope](screenshots/9.png)
    
-
 Test 6:
 Moving the board gradually in the downward slope (Movement in X and Z axis)
-Ouput: No pothole, LED OFF
-  <br>Screenshot:  
+Ouput: No pothole, LED OFF  
    ![dowanward_slope](screenshots/10.png)
   
 
 
 ## Project Demo
 Please click on the following link to watch the project demo video:
-(Insert link)
+https://drive.google.com/file/d/1ZyDd5-QGJ6xYCLIH-P7QxFzBBD7Gtk0U/view?usp=share_link
 
 ## Learnings 
 * Learnt to configure different hardware modules present on FRDM KL25Z like - Accelerometer, I2c, LEDs
