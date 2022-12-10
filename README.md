@@ -14,7 +14,8 @@ This project implements a Pothole detection System that will detect the potholes
 * To interface MMA8451Q (3-axis accelerometer) present on FRDM-KL25Z board with I2C to measure the movement across Z-axis.
 
 ## Block Diagram
-![Block_diagram][Block_diagram]
+![Block_diagram][screenshots/Block_diagram.png]
+
 
 ## Pothole Detection Algorithm
 * Curcular buffer is filled with the output values from the accelerometer measured across z-axis movement.
