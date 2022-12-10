@@ -52,14 +52,17 @@ This project implements a Pothole detection System that will detect the potholes
   When the board is kept stable, 
   Output: initial values of X, Y, Z from the accelerometer will be displayed on the UART, No pothole, LED OFF
   <br>Screenshot:  
+  
    ![Board_stable](screenshots/1.png)
   
 
 2. Test 2:
 Move the board forward and backward in X- direction
 Output: No pothole, LED off
+
   <br>Screenshot:  
    ![X-Axis-movement](screenshots/3.png)
+   
    ![Output](screenshots/4.png)
 
 Test 3:
@@ -67,6 +70,7 @@ Move the board up side wise (forward, backword) in Y-direction
 Ouput: No pothole, LED OFF
   <br>Screenshot:  
    ![Y-axis-movement](screenshots/5.png)
+   
    ![Output](screenshots/6.png)
 
 Test 4:
@@ -74,11 +78,13 @@ Move the board up and down (rapidly, as a jerk) in Z-direction
 Ouput: Pothole detected, RED LED ON
   <br>Screenshot:  
    ![Z-axis-movement](screenshots/7.png)
+   
    ![Output](screenshots/8.png)
 
 Test 5:
 Moving the board gradually in the upward slope (Movement in X and Z axis)
 Ouput: No pothole, LED OFF
+
   <br>Screenshot:  
    ![upward_slope](screenshots/9.png)
    
