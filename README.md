@@ -47,6 +47,24 @@ This project implements a Pothole detection System that will detect the potholes
 ## UART Terminal Configuration
 ![UART](screenshots/UART.png)
 
+## Project Demo
+Please click on the following link to watch the project demo video:
+https://drive.google.com/file/d/1ZyDd5-QGJ6xYCLIH-P7QxFzBBD7Gtk0U/view?usp=share_link
+
+## Learnings 
+* Learnt to configure different hardware modules present on FRDM KL25Z like - Accelerometer, I2c, LEDs
+* Learnt how I2c protocol works.
+* Explored accelerometer present on the FRDM KL25Z
+* UART communication
+* While woeking on this project I could experience the complete software development cycle phases right from requirement analysis to the system testing.
+
+## Challanges Faced
+* I faced some challanges while deciding the threshold value for the pothole detection.
+* Since this is a prototype model, configuring the system to real time scenario was kind of difficult.
+* Initially by just using the threshold and mod values, It was giving pothole detection in case of inclination as well, I resolved this issue by using filter.
+* Implementation of high pass filter was computetionally expensive and complex, hence I used a PT1 low-pass filter and calculated the deviation of the original and the filter output. This approach eliminated the false detection and also solved the initial calibration issues.
+
+
 ## Manual Test Routine
 1. Test 1:
   When the board is kept stable, 
@@ -87,19 +105,3 @@ Ouput: No pothole, LED OFF
   
 
 
-## Project Demo
-Please click on the following link to watch the project demo video:
-https://drive.google.com/file/d/1ZyDd5-QGJ6xYCLIH-P7QxFzBBD7Gtk0U/view?usp=share_link
-
-## Learnings 
-* Learnt to configure different hardware modules present on FRDM KL25Z like - Accelerometer, I2c, LEDs
-* Learnt how I2c protocol works.
-* Explored accelerometer present on the FRDM KL25Z
-* UART communication
-* While woeking on this project I could experience the complete software development cycle phases right from requirement analysis to the system testing.
-
-## Challanges Faced
-* I faced some challanges while deciding the threshold value for the pothole detection.
-* Since this is a prototype model, configuring the system to real time scenario was kind of difficult.
-* Initially by just using the threshold and mod values, It was giving pothole detection in case of inclination as well, I resolved this issue by using filter.
-* Implementation of high pass filter was computetionally expensive and complex, hence I used a PT1 low-pass filter and calculated the deviation of the original and the filter output. This approach eliminated the false detection and also solved the initial calibration issues.
